@@ -1,0 +1,286 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.navbar {
+  display: flex;
+  background-color: grey;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  align-items: center;
+  font-size:  16px;
+}
+.logo{
+  font-size: 20px;
+}
+.nav-list .list-item{
+  list-style-type:none;
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.navbar a{
+  color: black;
+  text-decoration: none;
+}
+.navbar a:hover{
+  color: white;
+}
+.titulo{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding: 40px;
+}
+
+.galeria-noticias{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+.noticia{
+  padding: 10px;
+  margin: 10px;
+}
+img{
+  width: 450px;
+  height: 250px;
+}
+.img-titulo{
+  text-align: center;
+  background-color: #888;
+  padding: 20px 10px;
+}
+.rodape {
+  display: flex;
+  background-color: grey;
+  justify-content: space-between;
+  padding: 10px 50px;
+  margin-top: 50px;
+  font-size: 14px;
+}
+.redes-sociais{
+  display:  flex;
+  list-style-type:none;
+  flex-direction: row;
+
+}
+.redes-sociais-item{
+  margin: 10px;
+}
+.redes-sociais-item img{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.galeria-noticias-2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.noticia-2{
+  background-color: #BBB;
+  width: 40%;
+  margin: 0px 50px 50px 50px;
+}
+.img-titulo-2{
+  background-color: #888;
+  text-align: center;
+  padding: 10px;
+}
+.artigo-2{
+  padding: 10px;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.paginacao a {
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.paginacao a:hover{
+  color: #F00;
+}
+
+.form-contato{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contato-input{
+  display: flex;
+  flex-direction: column;
+}
+.contato-input-item{
+  padding: 20px;
+}
+
+.form-login{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.login-input{
+  background-color: #AAA;
+  width: 25%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-input-item{
+  padding: 10px;
+}
+button{
+  width: 100px;
+  height: 30px;
+}
+
+.form-usuario{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.usuario-input{
+  background-color: #AAA;
+  width: 20%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.usuario-input-item{
+  padding: 10px;
+}
+.form-cadastro-usuario{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.cadastro-usuario-input{
+  background-color: #AAA;
+  width: 20%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cadastro-usuario-input-item{
+  padding: 10px;
+}
+.form-senha-usuario{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.senha-usuario-input{
+  background-color: #AAA;
+  width: 20%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.senha-usuario-input-item{
+  padding: 10px;
+}
+.form-usuario-logado{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.usuario-logado-input{
+  background-color: #AAA;
+  width: 20%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.usuario-logado-input-item{
+  padding: 10px;
+}
+.usuario-logado-input-item button{
+  width: 300px;
+  height: 30px;
+}
+
+.form-cadastro-noticia{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noticia-cadastrada{
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 350px;
+  
+}
+.noticia-cadastrada-imagem{
+  display: flex;
+  justify-content: center;
+}
+.noticia-cadastrada-titulo{
+  display: flex;
+  background-color: #555;
+  justify-content: center;
+}
+.noticia-cadastrada-conteudo{
+  background-color: #DDD;
+  padding: 20px;
+  text-align: justify;
+  
+}
+.noticia-cadastrada-info{
+  display: flex;
+  justify-content: space-between;
+  color: #FFF;
+  font-size: 18px;
+  align-items: center;
+}
+.noticia-cadastrada-botao{
+  margin: 15px;
+}
+
+
+.galeria-usuarios{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #EEE;
+}
+.usuarios-cadastrados{
+  display: flex;
+  flex-direction: column;
+  background-color: #999;
+  width: 400px;
+  margin: 50px;
+  padding: 10px 20px;
+}
+.usuarios-cadastrados-info{
+  
+}
+.usuarios-cadastrados-botao{
+  display: flex;
+  justify-content: space-around;
+  
+}
