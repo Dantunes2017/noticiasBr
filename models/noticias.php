@@ -1,12 +1,12 @@
 <?php
 class noticias extends model {
 
-	public function getNoticias($limit = 0) {
+	public function getNoticias($offset = 0, $limit = 0) {
 		$array = array();
 
-		$sql = "SELECT * FROM noticias ORDER BY id DESC;";
+		$sql = "SELECT * FROM noticias ORDER BY id DESC";
 		if($limit > 0) {
-			$sql .= " LIMIT ".$limit;
+			$sql .= " LIMIT ".$offset.",".$limit;
 		}
 
 		$sql = $this->db->query($sql);
@@ -16,6 +16,14 @@ class noticias extends model {
 		}
 
 		return $array;
+	}
+
+	public function getTotal(){
+		$sql = "SELECT COUNT(*) AS total FROM noticias";
+		$sql = $this->db->query($sql);
+		$sql = $sql->fetch();
+
+		return $sql['total'];
 	}
 
 }

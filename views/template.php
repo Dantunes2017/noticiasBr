@@ -28,9 +28,9 @@
 			(21) 3611-7989<br>
 		</div>
 		<ul class="redes-sociais">
-			<li class="redes-sociais-item"><img src="<?php echo BASE_URL; ?>assets/images/foto-rede"></li>
-			<li class="redes-sociais-item"><img src="<?php echo BASE_URL; ?>assets/images/foto-rede"></li>
-			<li class="redes-sociais-item"><img src="<?php echo BASE_URL; ?>assets/images/foto-rede"></li>
+			<li class="redes-sociais-item"><img src="<?php echo BASE_URL; ?>assets/images/facebook.png"></li>
+			<li class="redes-sociais-item"><img src="<?php echo BASE_URL; ?>assets/images/instagram.png"></li>
+			<li class="redes-sociais-item"><img src="<?php echo BASE_URL; ?>assets/images/twiter.png"></li>
 		</ul>
 	</div>
 </body>
