@@ -8,7 +8,7 @@
 		<div class="noticia-2">
 			<img class="img-noticias" src="<?php echo BASE_URL; ?>assets/images/<?php echo $noticiaitem['foto']?>"><br>
 			<div class="img-titulo-2"><strong><?php echo mb_strimwidth(utf8_encode($noticiaitem['titulo']), 0, 35, "..."); ?></strong><br></div>
-			<div class="artigo-2"><?php echo mb_strimwidth(utf8_encode($noticiaitem['conteudo']), 0, 300, '...'); ?><a href=""> Ler mais.</a><br></div>
+			<div class="artigo-2"><?php echo mb_strimwidth(utf8_encode($noticiaitem['conteudo']), 0, 300, ' '); ?><a href=""> Ler mais...</a><br></div>
 		</div>
 	<?php endforeach; ?>		
 </div>

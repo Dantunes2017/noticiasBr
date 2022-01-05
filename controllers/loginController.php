@@ -1,10 +1,17 @@
 <?php
-class loginController extends controller {
+class loginController extends controller{
+    public function index(){
 
-	public function index() {
-		$dados = array();
+        $dados = array();
 
-		$this->loadTemplate('login', $dados);
-	}
+        if(isset($_POST['email']) && !empty($_POST['email'])){
+            $email = addslashes($_POST['email']);
+            $senha = md5($_POST['senha']);
+        
+            $u = new usuarios();
+            $dados['erro'] = $u->logar($email, $senha);
+        }
 
+        $this->loadTemplate('login', $dados);
+    }
 }
