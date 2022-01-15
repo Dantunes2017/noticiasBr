@@ -23,11 +23,11 @@
   padding-left: 10px;
 }
 .navbar a{
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 .navbar a:hover{
-  color: white;
+  color: #FFF;
 }
 .titulo{
   display: flex;
@@ -219,16 +219,27 @@ button{
 }
 .usuario-logado-input-item{
   padding: 10px;
+  margin: 5px;
+  width: 90%;
+  height: 25px;
+  background-color: #777;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 25px;
 }
-.usuario-logado-input-item button{
-  width: 300px;
-  height: 30px;
+.usuario-logado-input-item a{
+  text-decoration: none;
+  color: #000;
 }
 
 .form-cadastro-noticia{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.conteudo-titulo textarea{
+  resize: none;
 }
 
 .noticia-cadastrada{

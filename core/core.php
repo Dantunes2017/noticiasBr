@@ -2,14 +2,12 @@
 class core {
 
 	public function run() {
-
-		$url = '/';
+        $url = '/';
 		if(isset($_GET['url'])) {
 			$url .= $_GET['url'];
 		}
 
 		$params = array();
-
 		if(!empty($url) && $url != '/') {
 			$url = explode('/', $url);
 			array_shift($url);
@@ -33,15 +31,9 @@ class core {
 			$currentAction = 'index';
 		}
 
-		if(!file_exists('controllers/'.$currentController.'.php') || !method_exists($currentController, $currentAction)) {
-			$currentController = 'notfoundController';
-			$currentAction = 'index';
-		}
-
 		$c = new $currentController();
-
 		call_user_func_array(array($c, $currentAction), $params);
-		
+
 	}
 
 }

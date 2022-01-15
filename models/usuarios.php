@@ -18,14 +18,8 @@ class usuarios extends model {
 		}
 
 	}
-	public function verificarLogin() {
-		if(!isset($_SESSION['login']) || ( isset($_SESSION['login']) && empty($_SESSION['login']))){
-			header("Location: ".BASE_URL."login");
-			exit;
-		}
-	}
 
-	public function verificarUsuario(){
+	public function verificarLogin() {
 		if(!isset($_SESSION['login']) || ( isset($_SESSION['login']) && empty($_SESSION['login']))){
 			return false;
 		}else{
@@ -33,5 +27,40 @@ class usuarios extends model {
 		}
 	}
 
-	
+	public function verificarSenha($id, $senha) {
+		$sql = "SELECT * FROM usuarios WHERE id = '$id' AND senha = '$senha'";
+		$sql = $this->db->query($sql);
+
+		if($sql->rowCount() > 0) {
+			$sql = $sql->fetch();
+
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function getNome($id) {
+		$sql = "SELECT nome FROM usuarios WHERE id = '$id'";
+		$sql = $this->db->query($sql);
+
+		if($sql->rowCount() > 0) {
+			$sql = $sql->fetch();
+
+			return $sql['nome'];
+		} else {
+			return '';
+		}
+	}
+
+	public function update($id, $nome, $sobreNome, $tel){
+		$sql = "UPDATE usuarios SET nome = '$nome', sobrenome = '$sobreNome', tel = '$tel' WHERE id = '$id'";
+
+		$sql = $this->db->query($sql);
+	}
+
+	public function updatePass($id, $senha){
+		$sql = "UPDATE usuarios SET senha = '$senha' WHERE id = '$id'";
+		$sql = $this->db->query($sql);
+	}
 }

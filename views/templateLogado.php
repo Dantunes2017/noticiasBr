@@ -15,7 +15,7 @@
 			<li class="list-item"><a href="<?php echo BASE_URL; ?>home">HOME</a></li>
 			<li class="list-item"><a href="<?php echo BASE_URL; ?>noticias">NOTÍCIAS</a></li>
 			<li class="list-item"><a href="<?php echo BASE_URL; ?>contato">CONTATO</a></li>
-			<li class="list-item"><a href="<?php echo BASE_URL; ?>login">LOGIN</a></li>
+			<li class="list-item"><a href="<?php echo BASE_URL; ?>painel">PAINEL</a></li>
 		</ul>
 	</div>
 	

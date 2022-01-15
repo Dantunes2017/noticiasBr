@@ -1,10 +1,13 @@
 <?php
 class noticiasController extends controller {
+	
+	public function __construct(){
+		parent::__construct();
+	}
+	
 	public function index() {
 
-		$dados = array(
-			'noticias' => array()
-		);
+		$dados = array();
 
 		$noticias = new noticias();
 		$limit = 4;
@@ -20,6 +23,11 @@ class noticiasController extends controller {
 
 		$dados['noticias'] = $noticias->getNoticias($offset, $limit);
 		
-		$this->loadTemplate('noticias', $dados);
+		$u = new usuarios();
+		if($u->verificarLogin() == false){
+			$this->loadTemplate('noticias', $dados);
+		}else{
+			$this->loadTemplateLogado('noticias', $dados);
+		}
 	}
 }
