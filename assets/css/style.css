@@ -2,9 +2,17 @@
   padding: 0;
   margin: 0;
 }
+body{
+  background-color: #000;
+  color: #FFF;
+}
+a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
 .navbar {
   display: flex;
-  background-color: grey;
+  background-color: #111;
   justify-content: space-between;
   padding-left: 50px;
   padding-right: 50px;
@@ -23,11 +31,11 @@
   padding-left: 10px;
 }
 .navbar a{
-  color: #000;
+  color: #FFF;
   text-decoration: none;
 }
 .navbar a:hover{
-  color: #FFF;
+  color: #F00;
 }
 .titulo{
   display: flex;
@@ -52,12 +60,12 @@ img{
 }
 .img-titulo{
   text-align: center;
-  background-color: #888;
+  background-color: #111;
   padding: 20px 10px;
 }
 .rodape {
   display: flex;
-  background-color: grey;
+  background-color: #111;
   justify-content: space-between;
   padding: 10px 50px;
   margin-top: 50px;
@@ -84,7 +92,7 @@ img{
   flex-wrap: wrap;
 }
 .noticia-2{
-  background-color: #BBB;
+  background-color: #333;
   width: 40%;
   margin: 0px 50px 50px 50px;
 }
@@ -92,7 +100,7 @@ img{
   width: 100%;
 }
 .img-titulo-2{
-  background-color: #888;
+  background-color: #111;
   text-align: center;
   padding: 10px;
 }
@@ -108,7 +116,7 @@ img{
 }
 
 .paginacao a {
-  color: #000;
+  color: #FFF;
   padding: 8px 16px;
   text-decoration: none;
   font-size: 20px;
@@ -129,14 +137,21 @@ img{
 .contato-input-item{
   padding: 20px;
 }
-
+input, textarea{
+  color: #FFF;
+  background-color: #000;
+}
+button{
+  background-color: #111;
+  color: #FFF;
+}
 .form-login{
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 .login-input{
-  background-color: #AAA;
+  background-color: #111;
   width: 25%;
   height: 200px;
   display: flex;
@@ -158,7 +173,7 @@ button{
   justify-content: center;
 }
 .usuario-input{
-  background-color: #AAA;
+  background-color: #111;
   width: 20%;
   height: 300px;
   display: flex;
@@ -192,7 +207,7 @@ button{
   justify-content: center;
 }
 .senha-usuario-input{
-  background-color: #AAA;
+  background-color: #111;
   width: 20%;
   height: 350px;
   display: flex;
@@ -209,7 +224,7 @@ button{
   justify-content: center;
 }
 .usuario-logado-input{
-  background-color: #AAA;
+  background-color: #111;
   width: 20%;
   height: 550px;
   display: flex;
@@ -222,14 +237,14 @@ button{
   margin: 5px;
   width: 90%;
   height: 25px;
-  background-color: #777;
+  background-color: #333;
   border-radius: 10px;
   text-align: center;
   line-height: 25px;
 }
 .usuario-logado-input-item a{
   text-decoration: none;
-  color: #000;
+  color: #FFF;
 }
 
 .form-cadastro-noticia{
@@ -247,6 +262,8 @@ button{
   display: flex;
   flex-direction: column;
   margin: 0px 350px;
+  border-style: solid;
+  border-color: #444;
   
 }
 .noticia-cadastrada-imagem{
@@ -255,11 +272,11 @@ button{
 }
 .noticia-cadastrada-titulo{
   display: flex;
-  background-color: #555;
+  background-color: #111;
   justify-content: center;
 }
 .noticia-cadastrada-conteudo{
-  background-color: #DDD;
+  background-color: #333;
   padding: 20px;
   text-align: justify;
   

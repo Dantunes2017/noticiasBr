@@ -22,7 +22,7 @@
 	<div class="mensagem"> 
 		Mensagem<br>
 		  <textarea name="message" rows="15" cols="60"></textarea>
-		  <br>
+		  <br><br>
 		  <button>Enviar</button>
 	</div>
 </form>
