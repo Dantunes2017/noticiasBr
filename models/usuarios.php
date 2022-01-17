@@ -63,4 +63,29 @@ class usuarios extends model {
 		$sql = "UPDATE usuarios SET senha = '$senha' WHERE id = '$id'";
 		$sql = $this->db->query($sql);
 	}
+
+	public function getUsuarios($offset = 0, $limit = 0) {
+		$array = array();
+
+		$sql = "SELECT * FROM usuarios ORDER BY id DESC";
+		if($limit > 0) {
+			$sql .= " LIMIT ".$offset.",".$limit;
+		}
+
+		$sql = $this->db->query($sql);
+
+		if($sql->rowCount() > 0) {
+			$array = $sql->fetchAll();
+		}
+
+		return $array;
+	}
+
+	public function getTotal(){
+		$sql = "SELECT COUNT(*) AS total FROM usuarios";
+		$sql = $this->db->query($sql);
+		$sql = $sql->fetch();
+
+		return $sql['total'];
+	}
 }

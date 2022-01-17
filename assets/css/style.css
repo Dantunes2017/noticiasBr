@@ -297,15 +297,17 @@ button{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #EEE;
 }
 .usuarios-cadastrados{
   display: flex;
   flex-direction: column;
-  background-color: #999;
+  background-color: #222;
+  color: #DDD;
   width: 400px;
   margin: 50px;
   padding: 10px 20px;
+  border-style: solid;
+  border-color: #444;
 }
 .usuarios-cadastrados-info{
   

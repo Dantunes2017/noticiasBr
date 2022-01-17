@@ -14,17 +14,14 @@
                 <a href="<?php echo BASE_URL; ?>painel/cadastroNoticia">Cadastrar Notícia</a><br>
             </div>
             <div class="usuario-logado-input-item">
-                <a href="<?php echo BASE_URL; ?>painel/usuarioNoticias">Editar/ Excluir Notícia</a><br>
+                <a href="<?php echo BASE_URL; ?>painel/usuarioNoticias">Editar/Excluir Notícia</a><br>
             </div>
             -------------------------------------------
             <div class="usuario-logado-input-item">
                 <a href="<?php echo BASE_URL; ?>painel/">Cadastrar Usuário</a><br>
             </div>
             <div class="usuario-logado-input-item">
-                <a href="<?php echo BASE_URL; ?>painel/">Editar Usuário</a><br>
-            </div>
-            <div class="usuario-logado-input-item">
-                <a href="<?php echo BASE_URL; ?>painel/">Excluir Usuário</a><br>
+                <a href="<?php echo BASE_URL; ?>painel/listarUsuarios">Editar/Excluir Usuário</a><br>
             </div>
             -------------------------------------------     
             <div class="usuario-logado-input-item">

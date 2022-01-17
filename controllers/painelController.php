@@ -188,6 +188,33 @@ class painelController extends controller {
         $this->loadTemplateLogado('usuarioNoticias', $dados);
 	}
 
+	public function listarUsuarios(){
+		$u = new usuarios();
+
+		if($u->verificarLogin() == false){
+			header("Location: ".BASE_URL."login");
+        	exit;
+		}
+
+		$dados = array();
+
+		$limit = 10;
+
+		$total = $u->getTotal();
+        $dados['paginas'] = ceil($total/$limit);
+
+        $dados['paginaAtual'] = 1;
+        if(!empty($_GET['p'])) {
+        	$dados['paginaAtual'] = intval($_GET['p']);
+        }
+        $offset = ($dados['paginaAtual'] * $limit) - $limit;
+		$dados['usuarios'] = $u->getUsuarios($offset, $limit);
+
+
+
+        $this->loadTemplateLogado('listarUsuarios', $dados);
+	}
+
 	public function logout(){
         unset($_SESSION['login']);
         header("Location: ".BASE_URL."login");
