@@ -18,6 +18,8 @@ a:visited {
   padding-right: 50px;
   align-items: center;
   font-size:  16px;
+  border-style: solid;
+  border-color: #222;
 }
 .logo{
   font-size: 20px;
@@ -51,7 +53,8 @@ a:visited {
 
 }
 .noticia{
-  padding: 10px;
+  border-style: solid;
+  border-color: #333;
   margin: 10px;
 }
 img{
@@ -70,6 +73,8 @@ img{
   padding: 10px 50px;
   margin-top: 50px;
   font-size: 14px;
+  border-style: solid;
+  border-color: #222;
 }
 .redes-sociais{
   display:  flex;
@@ -95,6 +100,8 @@ img{
   background-color: #333;
   width: 40%;
   margin: 0px 50px 50px 50px;
+  border-style: solid;
+  border-color: #444;
 }
 .img-noticias{
   width: 100%;
@@ -158,6 +165,8 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-style: solid;
+  border-color: #222;
 }
 .login-input-item{
   padding: 10px;
@@ -190,9 +199,9 @@ button{
   justify-content: center;
 }
 .cadastro-usuario-input{
-  background-color: #AAA;
+  background-color: #222;
   width: 20%;
-  height: 350px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,6 +223,8 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-style: solid;
+  border-color: #222;
 }
 .senha-usuario-input-item{
   padding: 10px;
@@ -319,4 +330,10 @@ button{
 }
 .alerta {
   color: #C00;
+}
+.ativo{
+  color: #0F0;
+}
+.inativo{
+  color: #F00;
 }

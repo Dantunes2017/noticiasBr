@@ -18,7 +18,7 @@
             </div>
             -------------------------------------------
             <div class="usuario-logado-input-item">
-                <a href="<?php echo BASE_URL; ?>painel/">Cadastrar Usuário</a><br>
+                <a href="<?php echo BASE_URL; ?>painel/cadastroUsuario">Cadastrar Usuário</a><br>
             </div>
             <div class="usuario-logado-input-item">
                 <a href="<?php echo BASE_URL; ?>painel/listarUsuarios">Editar/Excluir Usuário</a><br>

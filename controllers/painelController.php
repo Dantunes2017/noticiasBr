@@ -188,6 +188,37 @@ class painelController extends controller {
         $this->loadTemplateLogado('usuarioNoticias', $dados);
 	}
 
+	public function cadastroUsuario(){
+		$u = new usuarios();
+
+		if($u->verificarLogin() == false){
+			header("Location: ".BASE_URL."login");
+        	exit;
+		}
+
+		$dados = array();
+
+        if( (isset($_POST['nome']) && !empty($_POST['nome'])) || 
+        	(isset($_POST['sobrenome']) && !empty($_POST['sobrenome'])) ||
+        	(isset($_POST['email']) && !empty($_POST['email'])) ||
+        	(isset($_POST['telefone']) && !empty($_POST['telefone'])) ||
+        	(isset($_POST['senha']) && !empty($_POST['senha']))){
+            
+            $nome = addslashes(utf8_decode($_POST['nome']));
+            $sobreNome = addslashes(utf8_decode($_POST['sobrenome']));
+            $email = addslashes($_POST['email']);
+            $telefone = addslashes($_POST['telefone']);
+            $senha = addslashes(md5($_POST['senha']));
+            $usuarioTipo = addslashes($_POST['usuariotipo']);
+
+            $u->cadastrarUsuario($nome, $sobreNome, $email, $telefone, $senha, $usuarioTipo);
+            header("Location: ".BASE_URL."painel");
+            exit;
+        }
+
+		$this->loadTemplateLogado('cadastroUsuario', $dados);
+	}
+
 	public function listarUsuarios(){
 		$u = new usuarios();
 
@@ -213,6 +244,62 @@ class painelController extends controller {
 
 
         $this->loadTemplateLogado('listarUsuarios', $dados);
+	}
+
+	public function editarUsuario(){
+		$u = new usuarios();
+
+		if($u->verificarLogin() == false){
+			header("Location: ".BASE_URL."login");
+        	exit;
+		}
+
+		$dados = array();
+		$dados['usuario'] = $u->getUsuario();
+
+		if( (isset($_POST['nome']) && !empty($_POST['nome'])) || 
+        	(isset($_POST['sobrenome']) && !empty($_POST['sobrenome'])) ||
+        	(isset($_POST['email']) && !empty($_POST['email'])) ||
+        	(isset($_POST['telefone']) && !empty($_POST['telefone']))){
+            
+            $nome = addslashes(utf8_decode($_POST['nome']));
+            $sobreNome = addslashes(utf8_decode($_POST['sobrenome']));
+            $email = addslashes($_POST['email']);
+            $telefone = addslashes($_POST['telefone']);
+            $usuarioTipo = addslashes($_POST['usuariotipo']);
+
+            $u->cadastrarUsuario($nome, $sobreNome, $email, $telefone, $senha, $usuarioTipo);
+            header("Location: ".BASE_URL."painel");
+            exit;
+        }
+
+		$this->loadTemplateLogado('editarUsuario', $dados);
+	}
+
+	public function alterarStatusUsuario($id){
+		$u = new usuarios();
+		
+		$dados = array();
+		$dados = $u->alterarStatus($id);
+
+		header("Location: ".BASE_URL."painel/listarUsuarios");
+        exit;
+	}
+
+	public function alterarSenhaUsuario(){
+		$dados = array();
+
+		if((isset($_POST['senha'])) && (!empty($_POST['senha']))){
+            
+            $senha = md5($_POST['senha']);
+            $senha = addslashes($senha);
+
+			$u->updatePass($_SESSION['login'], $senha);
+            header("Location: ".BASE_URL."painel/listarUsuarios");
+            exit;		
+        }
+
+      $this->loadTemplateLogado('alterarSenhaUsuario', $dados);  
 	}
 
 	public function logout(){

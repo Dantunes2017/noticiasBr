@@ -5,14 +5,15 @@
 	<?php foreach($usuarios as $usuario): ?>
 		<div class="usuarios-cadastrados">
 			<div class="usuarios-cadastrados-info">
-				<strong>Nome: </strong><?php echo $usuario['nome']." ".$usuario['sobrenome']; ?><br><br>
+				<strong>Nome: </strong><?php echo utf8_encode($usuario['nome']." ".$usuario['sobrenome']); ?><br><br>
 				<strong>Email: </strong><?php echo $usuario['email']; ?><br><br>
-				<strong>Tel: </strong><?php echo $usuario['tel']; ?><br><br>		
+				<strong>Tel: </strong><?php echo $usuario['tel']; ?><br><br>
+				<strong class="<?php echo $usuario['status'];?>">Status: <?php echo strtoupper($usuario['status']);?></strong><br><br>		
 			</div>
 			<div class="usuarios-cadastrados-botao">
-				<button>Editar</button>
-				<button>Senha</button>
-				<button>Excluir</button>
+				<a href="<?php echo BASE_URL; ?>painel/editarUsuario/<?php echo $usuario['id'];?>"><button>Editar</button></a>
+				<a href="<?php echo BASE_URL; ?>painel/alterarSenhaUsuario/<?php echo $usuario['id'];?>"><button>Alterar Senha</button></a>
+				<a href="<?php echo BASE_URL; ?>painel/alterarStatusUsuario/<?php echo $usuario['id'];?>"><button>Ativar/Inativar</button></a>
 			</div>
 		</div>
 	<?php endforeach; ?>
